@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Japan</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+
+<!-- ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+<h1>Japan 🗾</h1>
+<a href="destinations.html">⬅ Back</a>
+
+<!-- DARK MODE BUTTON -->
+<button id="themeToggle"><i class="fa-solid fa-moon"></i></button>
+</header>
+
+<img class="full-img" src="images/japan.jpg" data-aos="zoom-in">
+
+<div class="content" data-aos="fade-up">
+
+<h2><i class="fa-solid fa-location-dot"></i> About</h2>
+<p>Japan is a country that blends ancient traditions with modern technology.</p>
+
+<h2><i class="fa-solid fa-star"></i> Attractions</h2>
+<ul>
+<li>Mount Fuji</li>
+<li>Tokyo City</li>
+<li>Kyoto Temples</li>
+</ul>
+
+<h2><i class="fa-solid fa-heart"></i> Why Visit</h2>
+<p>Famous for culture, food, and advanced technology.</p>
+
+</div>
+
+<!-- JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init();
+
+/* DARK MODE */
+const toggleBtn = document.getElementById("themeToggle");
+const body = document.body;
+
+if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark");
+}
+
+toggleBtn.onclick = () => {
+    body.classList.toggle("dark");
+    localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
+};
+</script>
+
+</body>
+</html>
